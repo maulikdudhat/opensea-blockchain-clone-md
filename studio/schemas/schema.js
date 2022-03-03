@@ -54,10 +54,51 @@ export default createSchema({
       name: 'marketItems',
       title: 'Market Items',
       type: 'document',
-      // feilds: [
-      //   name: 'title'
+      feilds: [
+        {
+          name: 'title',
+          title: 'Title',
+          type: 'string'
+        },
+        {
+          name: 'contractAddress',
+          title: 'Contract Address',
+          type: 'string',
+        },
+        {
+          name: 'description',
+          title: 'Description',
+          type: 'string',
 
-      // ]
-    }
+        }
+        , {
+          name: 'cretedBy',
+          title: 'Created By',
+          type: 'reference',
+          to: [{ type: 'users' }],
+        },
+        {
+          name: 'volumeTraded',
+          title: 'Volume Traded',
+          type: 'number'
+        },
+        {
+          name: 'floorPrice',
+          title: 'Floor Price',
+          type: 'number'
+        }
+        , {
+          name: 'owners',
+          title: 'Owners',
+          type: 'array',
+          of: [{ type: 'reference', to: [{ type: 'users' }] }]
+        },
+        {
+          name: 'profileImage',
+          title: 'Profile Image',
+          type: 'image',
+        }
+      ],
+    },
   ]),
 })
