@@ -11,54 +11,52 @@ export default createSchema({
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
-    /* Your types here! */
-
     {
       name: 'users',
       title: 'Users',
-      type: 'documnet',
-      feilds: [
+      type: 'document',
+      fields: [
         {
-          name: 'username',
+          name: 'userName',
           title: 'User Name',
-          type: 'string'
+          type: 'string',
         },
         {
-          name: 'WalletAddress',
+          name: 'walletAddress',
           title: 'Wallet Address',
-          type: 'string'
+          type: 'string',
         },
         {
-          name: 'ProfileImage',
+          name: 'profileImage',
           title: 'Profile Image',
-          type: 'image'
+          type: 'image',
         },
         {
           name: 'bannerImage',
           title: 'Banner Image',
-          type: 'image'
+          type: 'image',
         },
         {
           name: 'twitterHandle',
           title: 'Twitter Handle',
-          type: 'string'
+          type: 'string',
         },
         {
           name: 'igHandle',
           title: 'Instagram Handle',
           type: 'string',
-        }
-      ]
+        },
+      ],
     },
     {
       name: 'marketItems',
       title: 'Market Items',
       type: 'document',
-      feilds: [
+      fields: [
         {
           name: 'title',
           title: 'Title',
-          type: 'string'
+          type: 'string',
         },
         {
           name: 'contractAddress',
@@ -69,10 +67,9 @@ export default createSchema({
           name: 'description',
           title: 'Description',
           type: 'string',
-
-        }
-        , {
-          name: 'cretedBy',
+        },
+        {
+          name: 'createdBy',
           title: 'Created By',
           type: 'reference',
           to: [{ type: 'users' }],
@@ -80,24 +77,29 @@ export default createSchema({
         {
           name: 'volumeTraded',
           title: 'Volume Traded',
-          type: 'number'
+          type: 'number',
         },
         {
           name: 'floorPrice',
           title: 'Floor Price',
-          type: 'number'
-        }
-        , {
+          type: 'number',
+        },
+        {
           name: 'owners',
           title: 'Owners',
           type: 'array',
-          of: [{ type: 'reference', to: [{ type: 'users' }] }]
+          of: [{ type: 'reference', to: [{ type: 'users' }] }],
         },
         {
           name: 'profileImage',
           title: 'Profile Image',
           type: 'image',
-        }
+        },
+        {
+          name: 'bannerImage',
+          title: 'Banner Image',
+          type: 'image',
+        },
       ],
     },
   ]),
