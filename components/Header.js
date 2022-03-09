@@ -25,18 +25,30 @@ function Header() {
                     <Image src={OpenseaLogo} height="40px" width="40px"></Image>
                 </div>
             </Link>
+            <div className={style.logoText}>
+                OpenSea
+            </div>
             <div className={style.searchBar}>
                 <div className={style.searchIcon}>
                     <AiOutlineSearch />
                 </div>
+
                 <input className={style.searchInput} placeholder="Search Items, Collections, and accouts" />
             </div>
 
             <div className={style.headerItems}>
-                <div className={style.headerItem}>Csollections</div>
+                <Link href="/collections/0x8CDfa98b8d9467B8c90F952C58A03EeF6bEACa3D">
+                    <div className={style.headerItem}>Collections</div>
+                </Link>
                 <div className={style.headerItem}>Stats</div>
                 <div className={style.headerItem}>Resource</div>
                 <div className={style.headerItem}>Create</div>
+                <div className={style.headerIcon}>
+                    <CgProfile />
+                </div>
+                <div className={style.headerIcon}>
+                    <MdOutlineAccountBalanceWallet />
+                </div>
             </div>
 
 
