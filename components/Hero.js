@@ -23,7 +23,7 @@ const Hero = () => {
                 <div className={style.contentWrapper}>
                     <div className={style.copyContainer}>
                         <div className={style.title}>
-                            Discover , collect and sell NFT's
+                            Discover,collect and sell extraordinary NFTs
                         </div>
                         <div className={style.description}>
                             opensea is a world largest market of NTF's

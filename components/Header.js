@@ -37,7 +37,7 @@ function Header() {
             </div>
 
             <div className={style.headerItems}>
-                <Link href="/collections/0x8CDfa98b8d9467B8c90F952C58A03EeF6bEACa3D">
+                <Link href="/collections/0x24E6930D3BFbFdC436d067cCE9eD481a21Bc759b">
                     <div className={style.headerItem}>Collections</div>
                 </Link>
                 <div className={style.headerItem}>Stats</div>
